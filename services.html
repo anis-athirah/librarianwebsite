@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Services - Archivist for Audio Materials</title>
+   
+  <style>
+    :root {
+      --primary: #007acc;
+      --secondary: #ff6f61;
+      --highlight: #ff4081;
+      --light-blue: #42a5f5;
+      --dark-blue: #003f66;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #a2d9ff, #cbb4d4);
+      color: #3e3e59;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--primary), #005b99);
+      color: white;
+      padding: 20px 10px 0;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      border-radius: 0 0 25px 25px;
+    }
+
+    .logo {
+      height: 45px; /* <-- saiz logo yang dikecilkan */
+      width: auto;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 2.8rem;
+      letter-spacing: 1.5px;
+      color: #ffffff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      margin-top: 15px;
+      padding: 15px;
+      background-color: #1e88e5;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    nav a {
+      text-decoration: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      color: white;
+      border-radius: 999px;
+      background-color: var(--light-blue);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(66, 165, 245, 0.3);
+    }
+
+    nav a:hover {
+      background-color: #64b5f6;
+      transform: translateY(-2px);
+    }
+
+    nav a[aria-current="page"] {
+      background-color: var(--highlight);
+      box-shadow: 0 6px 15px rgba(255, 64, 129, 0.5);
+    }
+
+    .content {
+      background: #fff;
+      max-width: 900px;
+      margin: 50px auto 80px;
+      padding: 40px 45px;
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(101, 67, 171, 0.2);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .content:hover {
+      box-shadow: 0 25px 65px rgba(101, 67, 171, 0.35);
+    }
+
+    .service-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 25px auto 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      color: #5a189a;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-top: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid #cbb4d4;
+      padding-bottom: 8px;
+    }
+
+    p {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      margin-bottom: 1.6rem;
+      color: #4b4b6b;
+    }
+
+    ul {
+      padding-left: 25px;
+      color: #615a85;
+      font-size: 1.15rem;
+      margin-bottom: 2rem;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    ul li strong {
+      color: #5a189a;
+    }
+
+    footer {
+      background-color: #5a189a;
+      color: white;
+      text-align: center;
+      padding: 15px 20px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        margin: 40px 20px 70px;
+        padding: 30px 25px;
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      nav a {
+        margin: 0 10px;
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .content {
+        padding: 25px 20px;
+      }
+
+      h2 {
+        font-size: 1.7rem;
+      }
+
+      p, ul li {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-flex">
+      <img src="https://i.imgur.com/RNt4jmk.png" alt="AudioLibs Logo" class="logo" />
+      <div>
+        <h1>My Services</h1>
+      </div>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="services.html" aria-current="page">Services</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="login.html">Login</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
+
+  <div class="content" role="main">
+    <h2>What I Offer</h2>
+    <img src="https://i.imgur.com/Nlt1ifg.jpeg" alt="Archiving Audio Materials" class="service-image">
+
+    <p>As an Archivist for Audio Materials, I provide specialized services to ensure the preservation, organization, and promotion of sound heritage within the community.</p>
+
+    <h2>Services Provided</h2>
+    <ul>
+      <li><strong>Audio Collection & Preservation</strong>: Gathering and safeguarding oral histories, podcasts, interviews, and sound recordings from the community.</li>
+      <li><strong>Digitization of Audio Materials</strong>: Converting analog sound formats into digital formats for easier access and long-term preservation.</li>
+      <li><strong>Metadata Management</strong>: Cataloging and organizing audio materials with detailed metadata for efficient retrieval and research use.</li>
+      <li><strong>Exhibitions and Showcases</strong>: Organizing sound exhibitions and curating digital audio galleries to celebrate community voices.</li>
+      <li><strong>Collaborations and Workshops</strong>: Working with organizations and hosting educational workshops on the importance of audio preservation.</li>
+    </ul>
+
+    <h2>Why Choose My Services?</h2>
+    <p>I am committed to making sure that every story, voice, and piece of community history is captured, preserved, and shared with future generations through professional audio archiving practices.</p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Universal Sound Library. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
