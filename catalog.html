@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catalog - AudioLibs</title>
+  <meta name="description" content="Explore our catalog of curated audiobooks and educational audio content at AudioLibs.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+ 
+  <style>
+    :root {
+      --primary: #1e90ff;
+      --primary-dark: #1565c0;
+      --accent: #ff4081;
+      --accent-light: #ff79a9;
+      --bg-light: #f0f8ff;
+      --text-dark: #0d1b2a;
+      --text-muted: #506d84;
+      --card-bg: #ffffff;
+      --card-shadow: rgba(30, 144, 255, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #e3f2fd 0%, #fce4ec 100%);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+      color: white;
+      padding: 2rem 2rem 3rem;
+      text-align: center;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      box-shadow: 0 8px 20px rgba(30, 144, 255, 0.3);
+    }
+    .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.2rem;
+    }
+    .logo {
+      height: 70px;
+      width: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .logo:hover {
+      transform: scale(1.05);
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 3rem;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
+      color: var(--accent-light);
+    }
+    header img.hero-image {
+      max-width: 100%;
+      margin-top: 2rem;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      height: 220px;
+      object-fit: cover;
+    }
+
+    nav {
+      background: var(--primary-dark);
+      padding: 1rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 6px 18px rgba(21, 101, 192, 0.6);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.5rem 1.1rem;
+      border-radius: 30px;
+      background: var(--primary);
+      font-size: 1.05rem;
+      transition: background 0.3s ease;
+    }
+    nav a:hover {
+      background: var(--accent);
+    }
+    nav a[aria-current="page"] {
+      background: var(--accent);
+      cursor: default;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: var(--card-bg);
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(30, 144, 255, 0.12);
+    }
+
+    .search-bar {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .search-bar input {
+      padding: 0.6rem 1rem;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      width: 80%;
+      max-width: 400px;
+      font-size: 1rem;
+    }
+
+    section.reading-material {
+      margin-bottom: 3.5rem;
+    }
+    section.reading-material h2 {
+      color: var(--primary-dark);
+      margin-bottom: 1.2rem;
+      border-bottom: 4px solid var(--accent);
+      padding-bottom: 0.5rem;
+      font-size: 1.8rem;
+    }
+    section.reading-material li {
+      background-color: #f0f8ff;
+      border-left: 6px solid var(--accent);
+      padding: 1.3rem 1.6rem;
+      border-radius: 12px;
+      margin-bottom: 1.3rem;
+      box-shadow: 0 6px 15px rgba(255, 64, 129, 0.1);
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    main h1.catalog-title {
+      color: var(--primary-dark);
+      margin-bottom: 2.5rem;
+      text-align: center;
+      font-size: 2.8rem;
+    }
+
+    .audio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2.5rem;
+    }
+    .audio-card {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 24px;
+      box-shadow: 0 10px 25px var(--card-shadow);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .audio-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 18px 40px rgba(255, 64, 129, 0.3);
+      background: #fff0f6;
+    }
+    .audio-card h2 {
+      margin: 0 0 0.5rem;
+      color: var(--primary);
+      font-size: 1.4rem;
+    }
+    .audio-card em {
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    .audio-card audio {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1.2rem;
+    }
+    .audio-card small a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: var(--primary-dark);
+      color: white;
+      font-size: 1rem;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      box-shadow: 0 -5px 20px rgba(21, 101, 192, 0.7);
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .audio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-flex">
+      <img src="https://i.imgur.com/RNt4jmk.png" alt="AudioLibs Logo" class="logo" loading="lazy" />
+      <div>
+        <h1>Catalog</h1>
+        <p>Discover our curated library of audiobooks and educational podcasts.</p>
+      </div>
+    </div>
+    
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="aboutme.html">About Me</a>
+    <a href="services.html">Services</a>
+    <a href="catalog.html" aria-current="page">Catalog</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
+
+  <main>
+    <div class="search-bar">
+      <input type="search" placeholder="Search audio..." aria-label="Search Audio Catalog" />
+    </div>
+
+    <section class="reading-material" aria-label="Reading material list">
+      <h2>Reading Material</h2>
+      <ul>
+        <li><strong>Introduction to Library Science</strong> by Jane Doe</li>
+        <li><strong>History of Sound Technology</strong> by John Smith</li>
+        <li><strong>Digital Literacy Guide</strong> by Aisha Noor</li>
+        <li><strong>Preserving Oral Histories</strong> by Michael Tan</li>
+        <li><strong>Community Archiving Handbook</strong> by Sofia Lee</li>
+        <li><strong>Sound and Memory: An Audio Perspective</strong> by Lucas Nguyen</li>
+      </ul>
+    </section>
+
+    <h1 class="catalog-title">Catalog - AudioLibs</h1>
+
+    <div class="audio-grid" role="list">
+      <article class="audio-card" role="listitem">
+        <h2>Pride and Prejudice – Jane Austen (Chapter 1)</h2>
+        <em>Narrated by Elizabeth Klett</em>
+        <audio controls>
+          <source src="https://ia801509.us.archive.org/3/items/pride_prejudice_0711_librivox/prideandprejudice_01_austen.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        <small><a href="https://librivox.org/pride-and-prejudice-by-jane-austen/" target="_blank">Source</a></small>
+      </article>
+
+      <article class="audio-card" role="listitem">
+        <h2>Jane Eyre – Charlotte Brontë (Chapter 1)</h2>
+        <em>Narrated by Elizabeth Klett</em>
+        <audio controls>
+          <source src="https://ia800707.us.archive.org/32/items/janeeyre_1003_librivox/janeeyre_01_bront%C3%AB.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        <small><a href="https://librivox.org/jane-eyre-by-charlotte-bronte/" target="_blank">Source</a></small>
+      </article>
+
+      <article class="audio-card" role="listitem">
+        <h2>The Adventures of Sherlock Holmes – Arthur Conan Doyle (Story 1)</h2>
+        <em>Narrated by David Clarke</em>
+        <audio controls>
+          <source src="https://ia801009.us.archive.org/22/items/sherlockholmes_adventures_1_1005_librivox/adventuresofsherlockholmes_01_doyle.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        <small><a href="https://librivox.org/the-adventures-of-sherlock-holmes-by-sir-arthur-conan-doyle/" target="_blank">Source</a></small>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 AudioLibs. All rights reserved.
+  </footer>
+
+</body>
+</html>
