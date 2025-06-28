@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me - Archivist for Audio Materials</title>
+ 
+  <style>
+    :root {
+      --primary: #007acc;
+      --secondary: #ff6f61;
+      --highlight: #ff4081;
+      --light-blue: #42a5f5;
+      --dark-blue: #003f66;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #a2d9ff, #cbb4d4);
+      color: #3e3e59;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--primary), #005b99);
+      color: white;
+      padding: 20px 10px 0;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      border-radius: 0 0 25px 25px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 2.8rem;
+      letter-spacing: 1.5px;
+      color: #ffffff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      margin-top: 15px;
+      padding: 15px;
+      background-color: #1e88e5;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      position: relative;
+      z-index: 100;
+    }
+
+    nav a {
+      text-decoration: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      color: white;
+      border-radius: 999px;
+      background-color: var(--light-blue);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(66, 165, 245, 0.3);
+    }
+
+    nav a:hover {
+      background-color: #64b5f6;
+      transform: translateY(-2px);
+    }
+
+    nav a[aria-current="page"] {
+      background-color: var(--highlight);
+      box-shadow: 0 6px 15px rgba(255, 64, 129, 0.5);
+    }
+
+    .profile-card {
+      background: linear-gradient(135deg, #a2d9ff, #cbb4d4);
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 250px;
+      padding: 25px 20px;
+      text-align: center;
+      margin: 50px auto 30px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
+    .profile-card img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+      background: white;
+      margin-bottom: 15px;
+    }
+
+    .profile-card h2 {
+      margin: 0 0 6px;
+      font-size: 1.8rem;
+      color: #3e3e59;
+      font-weight: 700;
+    }
+
+    .profile-card p {
+      margin: 0;
+      font-weight: 600;
+      color: #5f5a7a;
+      font-size: 1.05rem;
+    }
+
+    .content {
+      background: #fff;
+      max-width: 900px;
+      margin: 20px auto 60px;
+      padding: 40px 45px;
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(101, 67, 171, 0.2);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .content:hover {
+      box-shadow: 0 25px 65px rgba(101, 67, 171, 0.35);
+    }
+
+    h2 {
+      color: #5a189a;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-top: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid #cbb4d4;
+      padding-bottom: 8px;
+    }
+
+    p {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      margin-bottom: 1.6rem;
+      color: #4b4b6b;
+    }
+
+    ul {
+      padding-left: 25px;
+      color: #615a85;
+      font-size: 1.15rem;
+      margin-bottom: 2rem;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    footer {
+      background-color: #5a189a;
+      color: white;
+      text-align: center;
+      padding: 15px 20px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>About Me</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="aboutme.html" aria-current="page">About Me</a>
+      <a href="services.html">Services</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="login.html">Login</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
+
+  <div class="profile-card">
+    <img src="https://i.imgur.com/kJrzLr7.jpeg" alt="Profile Photo" />
+    <h2>Hira Athirah</h2>
+    <p>Archivist for Audio Materials</p>
+  </div>
+
+  <div class="content" role="main">
+    <h2>Who I Am</h2>
+    <p>Hello! I'm a passionate Archivist for Audio Materials at AudioLibs. I specialize in preserving sound history and curating valuable audio resources for the community.</p>
+
+    <h2>My Mission</h2>
+    <p>To safeguard and promote access to the audio heritage of our community, ensuring that voices, sounds, and stories are preserved for present and future generations.</p>
+
+    <h2>My Vision</h2>
+    <p>To build a living archive where sound materials connect people across time, culture, and experiences through the magic of audio.</p>
+
+    <h2>Objectives</h2>
+    <ul>
+      <li>Collect and archive community-based audio materials.</li>
+      <li>Promote the importance of preserving sound culture.</li>
+      <li>Engage the community through audio exhibitions and workshops.</li>
+      <li>Ensure digital access and long-term preservation of audio collections.</li>
+    </ul>
+
+    <h2>Achievements</h2>
+    <ul>
+      <li>Archived over 300 hours of local oral histories and podcasts.</li>
+      <li>Developed a digital repository for public access.</li>
+      <li>Organized the "Voices of the Community" exhibition in 2024.</li>
+      <li>Collaborated with cultural institutions for audio heritage education.</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Universal Sound Library. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
