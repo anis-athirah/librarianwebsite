@@ -1,0 +1,201 @@
+DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ - AudioLibs</title>
+  
+  <style>
+    :root {
+      --primary: #007acc;
+      --highlight: #ff4081;
+      --light-blue: #42a5f5;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #a2d9ff, #cbb4d4);
+      color: #3e3e59;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--primary), #005b99);
+      color: white;
+      padding: 20px 10px 0;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      border-radius: 0 0 25px 25px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 2.5rem;
+      letter-spacing: 1.5px;
+    }
+
+    nav {
+      margin-top: 15px;
+      padding: 15px;
+      background-color: #1e88e5;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    nav a {
+      text-decoration: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      color: white;
+      border-radius: 999px;
+      background-color: var(--light-blue);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(66, 165, 245, 0.3);
+    }
+
+    nav a:hover {
+      background-color: #64b5f6;
+      transform: translateY(-2px);
+    }
+
+    nav a[aria-current="page"] {
+      background-color: var(--highlight);
+      box-shadow: 0 6px 15px rgba(255, 64, 129, 0.5);
+    }
+
+    .faq-container {
+      background-color: white;
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-container h2 {
+      text-align: center;
+      color: #5a189a;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .faq-question {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding: 15px;
+      background-color: #f0f8ff;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .faq-question:hover {
+      background-color: #e0f0fc;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 10px 15px;
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    footer {
+      background-color: #5a189a;
+      color: white;
+      text-align: center;
+      padding: 15px 20px;
+      font-weight: 600;
+      margin-top: auto;
+      border-radius: 25px 25px 0 0;
+    }
+
+    @media (max-width: 768px) {
+      .faq-container {
+        margin: 30px 20px;
+        padding: 30px;
+      }
+
+      nav a {
+        padding: 8px 16px;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>FAQ</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="services.html">Services</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+      <a href="faq.html" aria-current="page">FAQ</a>
+    </nav>
+  </header>
+
+  <div class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">What is AudioLibs?</div>
+      <div class="faq-answer">AudioLibs is a digital sound library dedicated to preserving, archiving, and providing access to audio-based knowledge and stories.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How can I access the audio catalog?</div>
+      <div class="faq-answer">You can explore our full audio catalog by visiting the "Catalog" page in the navigation bar. All items are available for listening and download where applicable.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can I contribute my own audio materials?</div>
+      <div class="faq-answer">Yes! We encourage community contributions. Please contact us through the "Contact" page to submit or donate audio materials.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Are the audiobooks free to use?</div>
+      <div class="faq-answer">Yes, all our audiobooks are in the public domain or under open licenses and are available free of charge.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How do I contact the archivist?</div>
+      <div class="faq-answer">You can use the form on the "Contact" page or email us directly for inquiries about services or collaboration opportunities.</div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Universal Sound Library. All rights reserved.
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(item => {
+      item.addEventListener('click', () => {
+        item.parentElement.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
